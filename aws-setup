@@ -1,0 +1,18 @@
+#!/bin/bash
+sudo apt update;
+sudo apt upgrade;
+sudo apt install ubuntu-desktop;
+sudo systemctl set-default graphical.target;
+sudo apt install tigervnc-standalone-server;
+sudo su;
+adduser cam;
+su - cam;
+vncpasswd;
+vncserver -localhost no;
+vncserver -list;
+
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386;
+wget "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.3.1.17/android-studio-2021.3.1.17-linux.tar.gz";
+sudo tar -xf android-studio-2021.3.1.17-linux.tar.gz;
+cd android-studio/bin && ./studio.sh;
+
